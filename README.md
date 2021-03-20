@@ -21,8 +21,7 @@
 
 #### shell
 
-This repo contains config for bash, zsh, and fish. As of March 2016, I'm using fish shell mostly, but fall back to bash once in a while. The bash and fish stuff are both well maintained; zsh, less so. If you're using fish you'll want to do a `git submodule update --init`.
-
+This repo contains config for bash, and zsh.
 
 ## my favorite parts.
 
@@ -58,7 +57,6 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 ## overview of files
 
 ####  Automatic config
-* `.vimrc`, `.vim` - vim config, obv.
 * `.inputrc` - behavior of the actual prompt line
 
 #### shell environment
@@ -72,7 +70,7 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 
 #### manual run
 * `setup-a-new-machine.sh` - random apps i need installed
-* `symlink-setup.sh`  - sets up symlinks for all dotfiles and vim config.
+* `symlink-setup.sh`  - sets up symlinks for all dotfiles.
 * `.osx` - run on a fresh osx setup
 * `brew.sh` & `brew-cask.sh` - homebrew initialization
 

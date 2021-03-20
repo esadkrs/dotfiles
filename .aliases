@@ -70,7 +70,6 @@ alias free_diskspace_report="diskspace_report"
 
 # Shortcuts
 alias g="git"
-alias v="vim"
 alias ungz="gunzip -k"
 
 # File size

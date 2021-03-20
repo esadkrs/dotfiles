@@ -163,8 +163,6 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 *known_hosts          1
 .ini                  1
 .plist                1
-#   vim
-.viminfo              1
 #   cisco VPN client configuration
 .pcf                  1
 #   adobe photoshop proof settings file
@@ -202,7 +200,6 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 .sed                  38;5;172
 .sh                   38;5;172
 .zsh                  38;5;172
-.vim                  38;5;172
 .kak                  38;5;172
 
 # interpreted {{{2
@@ -843,6 +840,3 @@ TERM xterm-color
 TERM xterm-debian
 TERM xterm-kitty
 # }}}
-
-
-# vim: ft=dircolors:fdm=marker:et:sw=2:
