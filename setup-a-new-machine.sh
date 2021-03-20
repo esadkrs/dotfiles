@@ -27,7 +27,6 @@ yarn global list --depth=0 > yarn-g-list.txt
 # backup some dotfiles likely not under source control
 cp -Rp \
     ~/.bash_history \
-    ~/.extra ~/.extra.fish \
     ~/.gitconfig.local \
     ~/.gnupg \
     ~/.nano \
