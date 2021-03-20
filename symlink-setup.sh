@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# this symlinks all the dotfiles (and .vim/) to ~/
+# this symlinks all the dotfiles to ~/
 # it also symlinks ~/bin for easy updating
 
 # this is safe to run multiple times and will prompt you about anything unclear

@@ -57,7 +57,6 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 ## overview of files
 
 ####  Automatic config
-* `.vimrc`, `.vim` - vim config, obv.
 * `.inputrc` - behavior of the actual prompt line
 
 #### shell environment
@@ -71,7 +70,7 @@ Lastly, I use `open .` to open Finder from this path. (That's just available nor
 
 #### manual run
 * `setup-a-new-machine.sh` - random apps i need installed
-* `symlink-setup.sh`  - sets up symlinks for all dotfiles and vim config.
+* `symlink-setup.sh`  - sets up symlinks for all dotfiles.
 * `.osx` - run on a fresh osx setup
 * `brew.sh` & `brew-cask.sh` - homebrew initialization
 

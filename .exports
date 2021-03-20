@@ -1,5 +1,5 @@
-# vim as default
-export EDITOR="vim"
+# VS Code as default
+export EDITOR="code"
 
 # Don’t clear the screen after quitting a manual page
 export MANPAGER="less -X"
