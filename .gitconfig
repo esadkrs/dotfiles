@@ -37,7 +37,6 @@
 	diff = delta # diff-so-fancy | less --tabs=4 -RFX
 	show = delta # diff-so-fancy | less --tabs=4 -RFX
 
-
 [delta]
 	max-line-length = 700
 	max-line-distance = 0.3 # better word-diff?
@@ -90,7 +89,6 @@
 [merge]
 	tool = opendiff
 	renameLimit = 0
-
 
 [url "git@github.com:"]
 	insteadOf = https://github.com/
