@@ -5,7 +5,6 @@ function md() {
 	mkdir -p "$@" && cd "$@"
 }
 
-
 # find shorthand
 function f() {
 	find . -name "$1" 2>&1 | grep -v 'Permission denied'
@@ -24,13 +23,6 @@ function la(){
     }'
 }
 
-# cd into whatever is the forefront Finder window.
-cdf() {  # short for cdfinder
-  cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
-}
-
-
-
 # git commit browser. needs fzf
 log() {
   git log --graph --color=always \
@@ -41,8 +33,6 @@ log() {
                 xargs -I % sh -c 'git show --color=always % | less -R'"
 }
 
-
-
 # Start an HTTP server from a directory, optionally specifying the port
 function server() {
 	local port="${1:-8011}"
@@ -52,13 +42,10 @@ function server() {
  	statikk --port "$port" .
 }
 
-
 # Copy w/ progress
 cp_p () {
   rsync -WavP --human-readable --progress $1 $2
 }
-
-
 
 # get gzipped size
 function gz() {
@@ -141,7 +128,6 @@ camerausedby() {
 	usedby=$(lsof | grep -w "AppleCamera\|USBVDC\|iSight" | awk '{printf $2"\n"}' | xargs ps)
 	echo -e "Recent camera uses:\n$usedby"
 }
-
 
 # animated gifs from any video
 # from alex sexton   gist.github.com/SlexAxton/4989674

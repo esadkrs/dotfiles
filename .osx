@@ -3,7 +3,6 @@
 # ~/.osx
 # paul's slight fork of https://mths.be/osx
 
-
 # FWIW, this `defaults find` is good at finding some set preferences.
 # e.g.    defaults find com.apple.ActivityMonitor
 
@@ -215,7 +214,6 @@ defaults write com.apple.BezelServices kDim -bool true
 # Turn off keyboard illumination when computer is not used for 5 minutes
 defaults write com.apple.BezelServices kDimTime -int 300
 
-
 # Disable auto-correct
 defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
@@ -225,7 +223,6 @@ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist 2> /dev/nul
 ###############################################################################
 # Screen                                                                      #
 ###############################################################################
-
 
 # Save screenshots to the desktop
 defaults write com.apple.screencapture location -string "${HOME}/Desktop"
@@ -254,7 +251,6 @@ defaults write com.apple.finder QuitMenuItem -bool true
 
 # Finder: disable window animations and Get Info animations
 defaults write com.apple.finder DisableAllAnimations -bool true
-
 
 # Finder: show hidden files by default
 defaults write com.apple.Finder AppleShowAllFiles -bool true
@@ -430,7 +426,6 @@ sudo ln -sf "/Applications/Xcode.app/Contents/Developer/Applications/iOS Simulat
 # 10: Put display to sleep
 # 11: Launchpad
 # 12: Notification Center
-
 
 # Top left screen corner → Put to sleep
 defaults write com.apple.dock wvous-tl-corner -int 10
@@ -801,7 +796,6 @@ cp -r init/Preferences.sublime-settings ~/Library/Application\ Support/Sublime\ 
 ###############################################################################
 # Transmission.app                                                            #
 ###############################################################################
-
 
 # Don’t prompt for confirmation before downloading
 defaults write org.m0k.transmission DownloadAsk -bool false

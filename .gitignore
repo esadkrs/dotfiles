@@ -1,10 +1,5 @@
-*-chrome-mac.zip
-third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/logger.js
-third_party/WebKit/Source/devtools/front_end/audits2/lighthouse/renderer/report-ui-features.js
-
 # git credential file
 .gitconfig.local
-
 
 # no thx
 node_modules
