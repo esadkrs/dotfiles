@@ -4,6 +4,10 @@
 # history
 SAVEHIST=100000
 
+# vim bindings
+bindkey -v
+
+
 fpath=( "$HOME/.zfunctions" $fpath )
 
 
