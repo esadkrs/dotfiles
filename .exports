@@ -19,3 +19,8 @@ eval "$(gdircolors -b ~/.dircolors)"
 function readpath() {
 	echo $PATH | tr : "\n"
 }
+
+#setting GOPATH to Dropbox
+export GOPATH=/Users/esadkiris/Dropbox/go
+export PATH=$PATH:$(go env GOPATH)/bin
+export GOMODCACHE=/Users/esadkiris/Dropbox/go/pkg/mod
