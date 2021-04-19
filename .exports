@@ -24,3 +24,4 @@ function readpath() {
 export GOPATH=/Users/esadkiris/Dropbox/go
 export PATH=$PATH:$(go env GOPATH)/bin
 export GOMODCACHE=/Users/esadkiris/Dropbox/go/pkg/mod
+      
