@@ -10,6 +10,9 @@ export LANG="en_US"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
+export PATH=~/dev/ghosts:$PATH
+export PATH=~/Dropbox/go/bin:$PATH
+
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
 command -v gdircolors >/dev/null 2>&1 || alias gdircolors="dircolors"
@@ -20,6 +23,8 @@ function readpath() {
 	echo $PATH | tr : "\n"
 }
 
+#Git-friendly functions
+export PATH=~/dev/git-friendly:$PATH
 
 #setting GOPATH to Dropbox
 export GOPATH=/Users/esadkiris/Dropbox/go
