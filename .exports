@@ -10,8 +10,10 @@ export LANG="en_US"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-export PATH=~/dev/ghosts:$PATH
+#Setting essential paths
+export PATH=~/Dropbox/go:$PATH
 export PATH=~/Dropbox/go/bin:$PATH
+export PATH=~/dev/ghosts:$PATH
 
 # here's LS_COLORS
 # github.com/trapd00r/LS_COLORS
