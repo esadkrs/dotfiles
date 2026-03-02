@@ -1,6 +1,8 @@
+# ~/.bashrc — interactive shells only
+case $- in
+  *i*) ;;
+  *) return;;
+esac
 
-
-[ -n "$PS1" ] && source ~/.bash_profile
-
-# when things like nvm/yarn/rvm add rando shit into my .bashrc i move them to ~/.extrarc just cuz
-[ -r "~/.extrarc" ] && source "~/.extrarc"
+# Load your main environment and aliases
+[ -r "$HOME/.bash_profile" ] && . "$HOME/.bash_profile"

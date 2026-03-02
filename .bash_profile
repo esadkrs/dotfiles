@@ -3,14 +3,10 @@
 #   ~/.extra can be used for settings you don’t want to commit,
 #   Use it to configure your PATH, thus it being first in line.
 for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
-    [ -r "$file" ] && source "$file"
+    [ -r "$file" ] && . "$file"
 done
 unset file
 
-# to help sublimelinter etc with finding my PATHS
-case $- in
-   *i*) source ~/.extra
-esac
 
 # generic colouriser
 GRC=`which grc`
@@ -22,6 +18,7 @@ if [ "$TERM" != dumb ] && [ -n "$GRC" ]
             alias "$app"='colourify '$app
     done
 fi
+
 
 # highlighting inside manpages and elsewhere
 export LESS_TERMCAP_mb=$'\E[01;31m'       # begin blinking
@@ -63,12 +60,12 @@ export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
 # ^ the only downside with this is [up] on the readline will go over all history not just this bash session.
 
-
+alias coolwindcommits='/usr/local/bin/coolwindcommits'
 
 # z beats cd most of the time. `brew install z`
 if which brew > /dev/null; then
     zpath="$(brew --prefix)/etc/profile.d/z.sh"
-    [ -s $zpath ] && source $zpath
+    [ -s $zpath ] && . $zpath
 fi;
 
 ##
@@ -84,17 +81,17 @@ if  which brew > /dev/null; then
 
     # bash completion.
     if [ -f "$(brew --prefix)/share/bash-completion/bash_completion" ]; then
-        source "$(brew --prefix)/share/bash-completion/bash_completion";
+        . "$(brew --prefix)/share/bash-completion/bash_completion";
     elif [ -f /etc/bash_completion ]; then
-        source /etc/bash_completion;
+        . /etc/bash_completion;
     fi
 
     # homebrew completion
-    source "$(brew --prefix)/etc/bash_completion.d/brew"
+    . "$(brew --prefix)/etc/bash_completion.d/brew"
 
     # hub completion
     if  which hub > /dev/null; then
-        source "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
+        . "$(brew --prefix)/etc/bash_completion.d/hub.bash_completion.sh";
     fi;
 fi;
 
@@ -129,3 +126,35 @@ shopt -s dirspell 2> /dev/null
 
 # Turn on recursive globbing (enables ** to recurse all directories)
 shopt -s globstar 2> /dev/null
+export ANDROID_SDK=/Users/esadkiris/Library/Android/sdk
+export PATH="/opt/homebrew/sbin:$PATH"
+
+# echo an easily readable $PATH
+function readpath() {
+	echo $PATH | tr : "\n"
+}
+
+# add Dropbox to path
+export PATH=/Users/esadkiris/Dropbox/bin:$PATH
+
+# postgres 
+export PATH="/usr/local/opt/postgresql@14/bin:$PATH"
+# export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+# export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+
+# Created by `pipx` on 2025-08-12 12:54:05
+export PATH="$PATH:/Users/esadkiris/.local/bin"
+export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+export PATH=$JAVA_HOME/bin:$PATH
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+export ANDROID_SDK_ROOT="$HOME/Library/Android/sdk"
+export ANDROID_HOME="$ANDROID_SDK_ROOT"
+export PATH="$PATH:$ANDROID_SDK_ROOT/emulator:$ANDROID_SDK_ROOT/platform-tools:$ANDROID_SDK_ROOT/tools:$ANDROID_SDK_ROOT/tools/bin"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
